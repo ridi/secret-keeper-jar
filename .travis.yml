@@ -4,3 +4,7 @@ scala:
   - 2.10.6
   - 2.11.11
   - 2.12.2
+env:
+  - SECRETKEEPER_AWS_ACCESS_KEY=access_key
+  - SECRETKEEPER_AWS_SECRET_KEY=secret_key
+  - SECRETKEEPER_AWS_REGION=us-east-1
