@@ -9,3 +9,7 @@ env:
     - SECRETKEEPER_AWS_ACCESS_KEY=access_key
     - SECRETKEEPER_AWS_SECRET_KEY=secret_key
     - SECRETKEEPER_AWS_REGION=us-east-1
+script:
+  - sbt clean coverage test
+after_success:
+  - sbt coverageReport coveralls
