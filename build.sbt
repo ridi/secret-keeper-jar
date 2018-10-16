@@ -19,6 +19,7 @@ libraryDependencies ++= Seq(
   "org.scalamock" %% "scalamock" % "4.1.0" % "test"
 )
 
+crossScalaVersions := Seq("2.10.6", "2.11.11", "2.12.2")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))
 bintrayOrganization := Some("ridi-data")
 publishMavenStyle := true
