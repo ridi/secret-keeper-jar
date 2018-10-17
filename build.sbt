@@ -2,7 +2,7 @@ import sbt.Keys.publishMavenStyle
 
 name := "secret-keeper-jar"
 
-version := "0.1.0"
+version := "0.1.0-TEST"
 
 scalaVersion := "2.12.7"
 
