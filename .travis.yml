@@ -8,7 +8,13 @@ env:
     - SECRETKEEPER_AWS_ACCESS_KEY=access_key
     - SECRETKEEPER_AWS_SECRET_KEY=secret_key
     - SECRETKEEPER_AWS_REGION=us-east-1
+    - BINTRAY_USER=ridi-data-deployer
+    - secure: "Hn2H1AHMIGKjwyQ6pBdjkP+eJn+wszmg9XFiBTr8rSS2uFzDcSu7YdnEPF1LMt5dWRCsL+HZNu8ichh4hOgaCuZc8j0juG4oMZJvf41JHLmH3uFK/uJK8lUMroVIIocawB9MqEK4FB7ry8X4YYKAz1VfgGnbkbfQvEnwUF0jOA4HYcpJVoVGem13tdxm8Sl3qS1KBLeWRqk9d+JHLONeS4AZ+P9+HOFM+TTaruA/u/9o9jOUtWigspInM8OXUYiTzcR3VfUdE3FLKrM+oS2Bk5Qd4DDHDDVg4x3SpP7vn2Zs5mbSJZZjHHVIhunvgH1ijDbNEESkogPL8FKbsBfXPqfbxuwKgcOL8Yt6EERBFrNJVVzIJLGXIVPlSjMrwIbhMMSBxzm3JxAMakDF0e+1HXq08A1ILBcAAnnK7/BJahbFKSgk66iCbDy1bZlx8CSCeRy99oEDO4/jo4nEj9pNvY/FgVb9oNkQ3DMv4PRybN0TcqLlEocyt5I7m4kFgcv8JFdyq2ANIzPvASnrOW9q2vtCp+ZQs0d97dNXq5gpaO3Y0LDAP78qO5bQpLV1mfp264TU1XurqoMjByNZEqSLGr9kK1j1h78jLgLOZDlgaGtCMUbHhOM/hiL6CH1jicXY7dXkXxlKH5GU7zXC+/l+uhHi4/MncO9E30qD0Nkw8EQ="
 script:
   - sbt clean coverage test
 after_success:
   - sbt coverageReport coveralls
+deploy:
+  on: tags
+  provider: script
+  script: sbt ++$TRAVIS_SCALA_VERSION publish
