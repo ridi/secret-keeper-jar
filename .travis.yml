@@ -15,6 +15,7 @@ script:
 after_success:
   - sbt coverageReport coveralls
 deploy:
-  on: tags
+  on:
+    branch: release
   provider: script
   script: sbt ++$TRAVIS_SCALA_VERSION publish
