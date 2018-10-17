@@ -2,7 +2,7 @@ import sbt.Keys.publishMavenStyle
 
 name := "secret-keeper-jar"
 
-version := "0.1.0-TEST"
+version := "0.1.0"
 
 scalaVersion := "2.12.7"
 
@@ -19,7 +19,6 @@ libraryDependencies ++= Seq(
   "org.scalamock" %% "scalamock" % "4.1.0" % "test"
 )
 
-crossScalaVersions := Seq("2.10.6", "2.11.11", "2.12.2")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))
 bintrayOrganization := Some("ridi-data")
 publishMavenStyle := true
