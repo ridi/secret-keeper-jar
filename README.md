@@ -1,6 +1,7 @@
 # Secret Keeper - JAR
 
 [![Build Status](https://travis-ci.com/ridi/secret-keeper-jar.svg?branch=master)](https://travis-ci.com/ridi/secret-keeper-jar)
+[![Download](https://api.bintray.com/packages/ridi-data/maven/secret-keeper-jar/images/download.svg) ](https://bintray.com/ridi-data/maven/secret-keeper-jar/_latestVersion)
 [![Coverage Status](https://coveralls.io/repos/github/ridi/secret-keeper-jar/badge.svg)](https://coveralls.io/github/ridi/secret-keeper-jar)
 
 ## Introduction
